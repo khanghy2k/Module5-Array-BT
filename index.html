@@ -6,14 +6,29 @@
 </head>
 <body>
 <script>
-    let arr = [];
-    let n = parseInt(prompt("Nhập số phấn từ của mảng : "));
-    for (let i = 0;i<n;i++)
-    {
-        let value = parseInt(prompt('Nhập giá trị cho mảng : '));
-        arr.push(value);
+    function countVowels(str) {
+        let vowels = str.match(/[aeiou]/gi);
+        if (vowels === null) {
+            return 0;
+        }
+        return vowels.length;
     }
-    console.log(arr.reverse())
+    let str = "cái gì vậy";
+    let numVowels = countVowels(str);
+    console.log(`Số lượng nguyên âm trong chuỗi "${str}" là: ${numVowels}`);
+
+
+
+    function resever() {
+        let arr = [];
+        let n = parseInt(prompt("Nhập số phấn từ của mảng : "));
+        for (let i = 0;i<n;i++)
+        {
+            let value = parseInt(prompt('Nhập giá trị cho mảng : '));
+            arr.push(value);
+        }
+        console.log(arr.reverse())
+    }
 
     // let array = [2, 6, 20, 11, 13,7,4,3,5];
     // let max;
